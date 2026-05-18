@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <header className="w-screen fixed top-0 left-0 z-50 flex items-center bg-black/80 backdrop-blur-md min-h-[80px]">
       <nav className="container mx-auto flex items-center justify-between px-5">
-        <img src="/logo.svg" alt="logo" className="h-24 w-auto cursor-pointer" />
+        <img src={`${import.meta.env.BASE_URL}logo.svg`} alt="logo" className="h-24 w-auto cursor-pointer" />
         <ul className="flex items-center gap-4">
           {navLinks.map(({ label, primary }) => (
             <li key={label}>
@@ -24,10 +24,10 @@ const NavBar = () => {
         </ul>
         <div className="flex-center gap-3">
         <button>
-          <img src="/search.svg" alt="Search" />
+          <img src={`${import.meta.env.BASE_URL}search.svg`} alt="Search" />
         </button>
         <button>
-          <img src="/cart.svg" alt="Cart" />
+          <img src={`${import.meta.env.BASE_URL}cart.svg`} alt="Cart" />
         </button>
         </div>
       </nav>
